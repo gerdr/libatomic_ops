@@ -2,13 +2,12 @@ AM_CFLAGS=@PICFLAG@
 AM_CPPFLAGS = -I$(top_builddir)/src -I$(top_srcdir)/src
 
 include_HEADERS = atomic_ops.h
-lib_LTLIBRARIES = libatomic_ops.la
+lib_LIBRARIES = libatomic_ops.a
 if NEED_ASM
-libatomic_ops_la_SOURCES = atomic_ops.c atomic_ops_sysdeps.S
+libatomic_ops_a_SOURCES = atomic_ops.c atomic_ops_sysdeps.S
 else
-libatomic_ops_la_SOURCES = atomic_ops.c
+libatomic_ops_a_SOURCES = atomic_ops.c
 endif
-libatomic_ops_la_LDFLAGS = -version-info 1:3:0 -no-undefined
 
 EXTRA_DIST = atomic_ops/sysdeps/README \
         atomic_ops/generalize-arithm.template \
