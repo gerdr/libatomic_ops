@@ -175,9 +175,7 @@ AC_SUBST(THREADDLLIBS)
 AM_CONDITIONAL(HAVE_PTHREAD_H, test x$have_pthreads = xtrue)
 AM_CONDITIONAL(NEED_ASM, test x$need_asm = xtrue)
 
-AC_CONFIG_FILES([
-        Makefile
-        src/Makefile ])
+AC_CONFIG_FILES([ src/Makefile ])
 
 AC_CONFIG_COMMANDS([default],[[]],[[
 PICFLAG="${PICFLAG}"
