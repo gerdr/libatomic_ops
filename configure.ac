@@ -13,7 +13,7 @@ AC_CONFIG_HEADERS([src/config.h])
 # Checks for programs.
 AM_PROG_CC_C_O
 AM_PROG_AS
-LT_INIT([disable-shared])
+AC_PROG_RANLIB
 
 # Checks for functions.
 AC_FUNC_MMAP
